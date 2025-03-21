@@ -6,6 +6,8 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/demo-chart-releases
     cyclops-ui.com/write-revision: main
   creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: service-one
   name: alpha
 spec:
   targetNamespace: default
@@ -25,5 +27,7 @@ spec:
       port: 80
       type: ClusterIP
     scaling:
-      replicas: 1
-status: {}
+      replicas: 3
+status:
+  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
+  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
