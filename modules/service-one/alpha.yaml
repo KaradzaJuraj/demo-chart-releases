@@ -28,6 +28,3 @@ spec:
       type: ClusterIP
     scaling:
       replicas: 3
-status:
-  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
-  templateResolvedVersion: ""

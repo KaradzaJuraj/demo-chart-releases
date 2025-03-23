@@ -26,4 +26,3 @@ spec:
       type: ClusterIP
     scaling:
       replicas: 1
-status: {}
