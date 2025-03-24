@@ -13,29 +13,13 @@
       "type": "object",
       "title": "General",
       "properties": {
-        "image": {
-          "title": "App image",
-          "type": "string",
-          "description": "Application image"
-        },
-        "version": {
-          "title": "Image version",
-          "type": "string",
-          "description": "Image tag you want to deploy"
-        },
         "environment": {
           "title": "Environment variables",
           "type": "object",
           "description": "Set environment variables"
         }
       },
-      "required": [
-        "image",
-        "version"
-      ],
       "order": [
-        "image",
-        "version",
         "environment"
       ]
     },
