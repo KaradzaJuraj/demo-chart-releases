@@ -5,6 +5,7 @@ metadata:
     cyclops-ui.com/write-path: modules/service-one
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/demo-chart-releases
     cyclops-ui.com/write-revision: main
+    cyclops/reconciled-at: "2025-03-23T23:20:39+01:00"
   creationTimestamp: null
   labels:
     app.kubernetes.io/instance: service-one
@@ -27,4 +28,5 @@ spec:
       port: 80
       type: ClusterIP
     scaling:
-      replicas: 3
+      replicas: 5
+status: {}
