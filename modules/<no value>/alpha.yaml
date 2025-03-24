@@ -1,0 +1,28 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  annotations:
+    cyclops-ui.com/write-path: modules/{{ .Spec.Values.serviceName }}
+    cyclops-ui.com/write-repo: https://github.com/petar-cvit/demo-chart-releases
+    cyclops-ui.com/write-revision: main
+  creationTimestamp: null
+  name: alpha
+spec:
+  targetNamespace: default
+  template:
+    path: helm
+    repo: https://github.com/petar-cvit/demo-chart-releases
+    sourceType: git
+    version: main
+  values:
+    general:
+      environment:
+        ENVIRONMENT: production
+    networking:
+      expose: true
+      port: 80
+      type: ClusterIP
+    scaling:
+      replicas: 1
+    serviceName: service-one
+status: {}
