@@ -1,6 +1,6 @@
 general:
   image: nginx
-  version: 1.14.2
+  version: 1.14.1
   environment:
     ENVIRONMENT: production
 
