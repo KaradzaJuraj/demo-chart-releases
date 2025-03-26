@@ -1,0 +1,13 @@
+general:
+  image: nginx
+  version: 1.14.1
+  environment:
+    ENVIRONMENT: production
+
+scaling:
+  replicas: 1
+
+networking:
+  expose: true
+  port: 80
+  type: ClusterIP

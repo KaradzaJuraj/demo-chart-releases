@@ -1,0 +1,29 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: TemplateStore
+metadata:
+  name: product-one
+  namespace: cyclops
+spec:
+  repo: https://github.com/petar-cvit/demo-chart-releases
+  path: product-one
+  version: main
+  sourceType: git
+  enforceGitOpsWrite:
+      repo: https://github.com/petar-cvit/demo-chart-releases
+      path: modules/product-one
+      version: main
+---
+apiVersion: cyclops-ui.com/v1alpha1
+kind: TemplateStore
+metadata:
+  name: product-two
+  namespace: cyclops
+spec:
+  repo: https://github.com/petar-cvit/demo-chart-releases
+  path: product-two
+  version: main
+  sourceType: git
+  enforceGitOpsWrite:
+    repo: https://github.com/petar-cvit/demo-chart-releases
+    path: modules/product-two
+    version: main

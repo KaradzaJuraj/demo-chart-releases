@@ -2,8 +2,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Release.Name }}-product-two
   labels:
+    product: product-two
     app: {{ .Release.Name }}
 spec:
   type: {{ .Values.networking.type | default "ClusterIP" }}
@@ -13,5 +14,6 @@ spec:
       protocol: TCP
       name: http
   selector:
+    product: product-two
     app: {{ .Release.Name }}
   {{- end }}

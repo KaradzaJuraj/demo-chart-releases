@@ -1,21 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Release.Name }}-product-two
   labels:
+    product: product-two
     app: {{ .Release.Name }}
 spec:
   replicas: {{ (.Values.scaling).replicas | default 1 }}
   selector:
     matchLabels:
+      product: product-two
       app: {{ .Release.Name }}
   template:
     metadata:
       labels:
+        product: product-two
         app: {{ .Release.Name }}
     spec:
       containers:
-        - name: {{ .Release.Name }}
+        - name: {{ .Release.Name }}-product-two
           image: "{{ .Values.general.image }}:{{ .Values.general.version }}"
           {{- if ((.Values.networking).expose) }}
           ports:

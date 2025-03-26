@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: product-one
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: cyclops
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: products
+    path: modules/product-one
     repoURL: https://github.com/petar-cvit/demo-chart-releases
     targetRevision: main
