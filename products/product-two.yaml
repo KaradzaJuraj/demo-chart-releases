@@ -10,5 +10,5 @@ spec:
   project: default
   source:
     path: modules/product-two
-    repoURL: https://github.com/petar-cvit/demo-chart-releases
+    repoURL: https://github.com/KaradzaJuraj/demo-chart-releases
     targetRevision: main
