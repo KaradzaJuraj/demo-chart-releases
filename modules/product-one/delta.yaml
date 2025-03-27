@@ -25,5 +25,5 @@ spec:
       port: 80
       type: ClusterIP
     scaling:
-      replicas: 5
+      replicas: 3
 status: {}
