@@ -6,6 +6,8 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/KaradzaJuraj/demo-chart-releases
     cyclops-ui.com/write-revision: main
   creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: product-one
   name: p-1
 spec:
   targetNamespace: default
@@ -19,7 +21,7 @@ spec:
       environment:
         ENVIRONMENT: production
     networking:
-      expose: true
+      expose: false
       port: 80
       type: ClusterIP
     scaling:
