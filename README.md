@@ -10,7 +10,7 @@ In this case, Cyclops does not deploy applications directly to the cluster, but 
 
 The repository implements the following hierarchy of apps:
 
-![Screenshot 2025-03-27 at 11.05.05.png](attachment:169dfd88-ade9-4a26-bd29-957c6351e2d3:Screenshot_2025-03-27_at_11.05.05.png)
+<img width="1141" alt="Screenshot 2025-03-27 at 15 50 53" src="https://github.com/user-attachments/assets/33d61ce4-5110-4614-9024-8f001c664b58" />
 
 This repository holds two Helm charts (`/product-one` and `/product-two`) that each represent different applications a company wants to deploy.
 
@@ -157,7 +157,5 @@ To update the `general.version` on multiple modules at once you can:
 1. Update the `values.yaml` with the new `general.version`
 2. Commit and push to git
 3. Select modules you want to apply the new version to and hit Reconcile
-
-   ![Screenshot 2025-03-27 at 12.25.13.png](attachment:6dd2014b-7f32-4032-9308-001914c0aec6:Screenshot_2025-03-27_at_12.25.13.png)
-
+    <img width="1509" alt="Screenshot 2025-03-27 at 15 51 30" src="https://github.com/user-attachments/assets/a60cbed0-0c94-4ee1-a6d0-502fd2344cbb" />
 4. Cyclops will now pull the latest Helm chart and its values and redeploy all the selected Modules
