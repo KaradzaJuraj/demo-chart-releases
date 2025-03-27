@@ -1,14 +1,5 @@
 {
   "properties": {
-    "serviceName": {
-      "title": "Service name",
-      "type": "string",
-      "description": "Name of the service to deploy",
-      "enum": [
-        "service-one",
-        "service-two"
-      ]
-    },
     "general": {
       "type": "object",
       "title": "General",
@@ -95,13 +86,9 @@
     }
   },
   "order": [
-    "serviceName",
     "general",
     "scaling",
     "networking"
-  ],
-  "required": [
-    "serviceName"
   ],
   "title": "Values",
   "type": "object"
